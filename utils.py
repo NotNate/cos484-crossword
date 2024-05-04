@@ -1,4 +1,7 @@
+import argparse
 import puz
+import json
+
 def convert_puz_to_dict(fname):
     puzzle = puz.read(fname)
     numbering = puzzle.clue_numbering()
@@ -26,3 +29,18 @@ def convert_puz_to_dict(fname):
             "direction": "D",
             "length": clue['len']
         }
+
+    return crossword_grid
+
+def main():
+    parser = argparse.ArgumentParser(description="Convert .puz crossword file to JSON format")
+    parser.add_argument("input", help="Input .puz file")
+    parser.add_argument("output", help="Output .json file")
+    args = parser.parse_args()
+
+    crossword_dict = convert_puz_to_dict(args.input)
+    with open(args.output, 'w') as f:
+        json.dump(crossword_dict, f, indent=4)
+
+if __name__ == "__main__":
+    main()
