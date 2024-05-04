@@ -32,6 +32,10 @@ def convert_puz_to_dict(fname):
 
     return crossword_grid
 
+def load_grid(grid_path):
+    with open(grid_path) as fp:
+        return json.load(fp)
+
 def main():
     parser = argparse.ArgumentParser(description="Convert .puz crossword file to JSON format")
     parser.add_argument("input", help="Input .puz file")
