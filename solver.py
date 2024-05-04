@@ -173,5 +173,3 @@ if __name__ == '__main__':
 
     solver = CrosswordPuzzleSolver(args.grid_file, args.clues_file, args.output_file)
     print(solver.display_solution())
-    correct, total = utils.compare_answers("nymold.puz", args.output_file)
-    print(f"Correct: {correct}, Total: {total}")
