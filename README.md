@@ -12,3 +12,13 @@ You'll next need to generate an OpenAI key to use for the project. Please create
 ```
 KEY="YOURKEYGOESHERE"
 ```
+
+In order to run on an example puzzle, you'll first need the `.puz` file associated with that particular mini puzzle.
+
+From there, the process goes as follows:
+1. `python utils.py puzzle.puz puzzle.json`
+2. `python generate_clues.py puzzle.json clue_output.json ./database/CLUEDATABASE`
+3. `python solver.py puzzle.json clue_output.json puzzle_answers.json`
+4. `python eval.py puzzle.puz puzzle_answers.json`
+
+This is the entire process of converting the puzzle to the necessary grid, generating the clues for each clue in hte puzzle, solving it (or not) based on the constraints, and then evaluating it.
