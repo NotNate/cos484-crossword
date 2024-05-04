@@ -1,0 +1,2 @@
+# Scraper
+This was the code we used in Google Colab (where the project was originally based) to scrape particular publications' crossword puzzles. This uses `xword-dl` as the scraper. If you want to download NYT crosswords, you must have a subscription and then login via `xword-dl nyt --authenticate`.
