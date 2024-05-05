@@ -12,6 +12,7 @@ def recommend_crossword_answers(clue, length, amount):
     client = OpenAI(api_key=api_key)
 
     response = client.chat.completions.create(
+        # LEFT AS DEFAULT FOR TESTING, CHANGE WITH YOUR FINETUNED VERSION
         model="gpt-3.5-turbo",
         messages=[
             {

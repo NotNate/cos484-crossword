@@ -13,6 +13,8 @@ You'll next need to generate an OpenAI key to use for the project. Please create
 KEY="YOURKEYGOESHERE"
 ```
 
+Another note: In order to use your version of the fine-tuned GPT-3.5, you will need to go into `gpt3.py` and replace the model with `model="ft:gpt-3.5-turbo:my-org:custom_suffix:id"` or whatever your version is.
+
 In order to run on an example puzzle, you'll first need the `.puz` file associated with that particular mini puzzle.
 
 From there, the process goes as follows:
