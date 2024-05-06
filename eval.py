@@ -72,7 +72,7 @@ def main():
             print(f"Yours: {incorrect['incorrect']}\n")
 
     print(f"Correct answers: {correct} out of {total}")
-    print(f"Correct letters: {incorrect_letters} out of {total_letters}")
+    print(f"Incorrect letters: {incorrect_letters} out of {total_letters}")
 
 if __name__ == "__main__":
     main()
